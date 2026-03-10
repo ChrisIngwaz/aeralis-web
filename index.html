@@ -3,73 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aeralis | Limpieza de Fachadas con Drones</title>
+    <title>AERALIS | Ingeniería en Limpieza con Drones</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; }
-        .font-tech { font-family: 'Orbitron', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .hero-video-overlay { background: linear-gradient(0deg, #050505 0%, rgba(5, 5, 5, 0.4) 100%); }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
+        .font-impact { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
+        
+        /* Video de Fondo Estilo Disruptivo */
+        .hero-container { position: relative; height: 100vh; width: 100%; overflow: hidden; }
+        .hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: 0; transform: translateX(-50%) translateY(-50%); object-fit: cover; }
+        .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,43,73,0.6) 0%, rgba(0,43,73,0.9) 100%); z-index: 1; }
+        
+        .content-z { position: relative; z-index: 10; }
+        .card-benefit { border-left: 4px solid #00A3E0; transition: all 0.3s ease; }
+        .card-benefit:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 p-6">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-full px-8 py-3">
-            <div class="text-2xl font-tech font-bold tracking-tighter text-cyan-400">AERALIS</div>
-            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
-                <a href="#tecnologia" class="hover:text-cyan-400 transition">Tecnología</a>
-                <a href="#beneficios" class="hover:text-cyan-400 transition">Beneficios</a>
-                <a href="#contacto" class="hover:text-cyan-400 transition text-cyan-400 font-bold">Cotizar</a>
+    <nav class="fixed w-full z-50 py-4 px-6 bg-white/10 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <img src="logo-aeralis.png" alt="Aeralis Logo" class="h-14 w-auto">
+            
+            <div class="hidden md:flex space-x-8 font-bold text-xs tracking-widest text-white">
+                <a href="#beneficios" class="hover:text-blue-400 transition">BENEFICIOS</a>
+                <a href="#tecnologia" class="hover:text-blue-400 transition">TECNOLOGÍA</a>
+                <a href="https://wa.me/593995163184" class="bg-blue-600 px-6 py-2 rounded shadow-lg hover:bg-blue-500 transition">WHATSAPP</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <video autoplay muted loop playsinline class="absolute w-full h-full object-cover z-0">
+    <header class="hero-container flex items-center justify-center text-center">
+        <video autoplay muted loop playsinline class="hero-video">
             <source src="video-hero.mp4" type="video/mp4">
         </video>
-        <div class="absolute inset-0 hero-video-overlay z-10"></div>
+        <div class="overlay"></div>
         
-        <div class="relative z-20 text-center px-4">
-            <h1 class="text-5xl md:text-8xl font-tech mb-6 leading-tight">EL CIELO ES NUESTRO <br><span class="text-cyan-400 text-gradient">ANDAMIO</span></h1>
-            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-10">Limpieza industrial de precisión con drones. Eficiencia, seguridad y tecnología aeroespacial para tu fachada.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#contacto" class="bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105">INICIAR PROYECTO</a>
-                <a href="#tecnologia" class="glass py-4 px-10 rounded-full hover:bg-white/10 transition">Ver Tecnología</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="tecnologia" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-tech mb-16 text-center italic underline decoration-cyan-500">INGENIERÍA EN ALTURA</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass p-8 rounded-3xl hover:border-cyan-500/50 transition group">
-                <div class="text-cyan-400 text-4xl mb-4 group-hover:scale-110 transition-transform">01</div>
-                <h3 class="font-tech text-xl mb-4">Hidrolavado 4K</h3>
-                <p class="text-gray-500">Sistemas de alta presión controlados por IA para una limpieza uniforme sin daños estructurales.</p>
-            </div>
-            <div class="glass p-8 rounded-3xl hover:border-cyan-500/50 transition group">
-                <div class="text-cyan-400 text-4xl mb-4 group-hover:scale-110 transition-transform">02</div>
-                <h3 class="font-tech text-xl mb-4">Riesgo Cero</h3>
-                <p class="text-gray-500">Eliminamos el uso de andamios y personal suspendido, reduciendo la responsabilidad civil y tiempos.</p>
-            </div>
-            <div class="glass p-8 rounded-3xl hover:border-cyan-500/50 transition group">
-                <div class="text-cyan-400 text-4xl mb-4 group-hover:scale-110 transition-transform">03</div>
-                <h3 class="font-tech text-xl mb-4">Mapeo Térmico</h3>
-                <p class="text-gray-500">Detectamos fisuras o puntos calientes en la fachada mientras limpiamos, gracias a sensores avanzados.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contacto" class="py-20 border-t border-white/10 bg-[#0a0a0a]">
-        <div class="max-w-4xl mx-auto text-center px-6">
-            <h2 class="text-4xl font-tech mb-8">¿LISTO PARA <span class="text-cyan-400 font-bold">AERALIS</span>?</h2>
-            <p class="mb-12 text-gray-400">Deja de usar métodos del siglo pasado. Optimiza hoy.</p>
-            <a href="https://wa.me/593995163184" class="inline-block bg-white text-black font-bold py-5 px-12 rounded-full hover:bg-cyan-400 transition-colors">
-                HABLEMOS POR WHATSAPP
+        <div class="content-z px-6">
+            <h1 class="font-impact text-4xl md:text-7xl text-white leading-tight mb-4">
+                Ingeniería <br><span class="text-blue-400">en las alturas</span>
+            </h1>
+            <p class="max-w-3xl mx-auto text-blue-100 text-lg md:text-xl mb-10 font-light">
+                Limpieza de fachadas de alto nivel. Eliminamos el riesgo humano, <br class="hidden md:block"> reducimos costos y protegemos el medio ambiente.
+            </p>
+            <a href="#beneficios" class="bg-white text-blue-900 font-bold py-4 px-10 rounded-full hover:bg-blue-400 hover:text-white transition-all transform hover:scale-105">
+                DESCUBRE EL FUTURO
             </a>
+        </div>
+    </header>
+
+    <section id="beneficios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="card-benefit p-8 bg-gray-50">
+                    <h3 class="font-impact text-xl mb-4 text-blue-900">Ahorro Radical</h3>
+                    <p class="text-gray-600">Eliminamos el costo de alquiler de andamios y maquinaria pesada. Tiempos de ejecución hasta 5 veces más rápidos.</p>
+                </div>
+                <div class="card-benefit p-8 bg-gray-50 !border-l-red-500">
+                    <h3 class="font-impact text-xl mb-4 text-red-600">Riesgo Cero</h3>
+                    <p class="text-gray-600">La seguridad de tu personal y de terceros es nuestra prioridad. Cero operarios suspendidos, cero accidentes fatales.</p>
+                </div>
+                <div class="card-benefit p-8 bg-gray-50 !border-l-green-500">
+                    <h3 class="font-impact text-xl mb-4 text-green-600">Eco-Friendly</h3>
+                    <p class="text-gray-600">Uso inteligente de agua y productos biodegradables. Sin impacto negativo en flora, fauna o estructuras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="font-impact text-3xl mb-8">Tecnología <br>que se nota</h2>
+                <p class="text-gray-400 mb-6 italic leading-relaxed">
+                    "En Aeralis, no solo limpiamos; aplicamos Human Engineering para que el mantenimiento de tu edificio deje de ser una preocupación logística y de seguridad para convertirse en un proceso automatizado y eficiente."
+                </p>
+                <ul class="space-y-4 text-sm font-bold tracking-widest text-blue-400">
+                    <li>• PRECISIÓN GPS MILIMÉTRICA</li>
+                    <li>• HIDROLAVADO DE ALTA PRESIÓN</li>
+                    <li>• MONITOREO EN TIEMPO REAL</li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <img src="trabajo1.jpg" alt="Drone Aeralis operando" class="rounded-2xl shadow-2xl">
+                    <div class="bg-blue-600 p-4 rounded-2xl text-center">
+                        <span class="font-impact text-2xl">100%</span>
+                        <p class="text-[10px] tracking-widest uppercase">Seguridad</p>
+                    </div>
+                </div>
+                <div class="pt-12">
+                    <img src="trabajo2.jpg" alt="Fachada limpia con drone" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 text-center px-6 border-t border-gray-100">
+        <h2 class="font-impact text-2xl md:text-4xl mb-6">¿Tu edificio sigue en el siglo pasado?</h2>
+        <p class="text-gray-500 mb-10 max-w-xl mx-auto">Cotiza ahora y obtén un reporte de estado de fachada sin costo en tu primer servicio.</p>
+        <a href="https://wa.me/593995163184" class="inline-block bg-green-500 text-white font-bold py-5 px-14 rounded-full hover:bg-green-600 transition-all shadow-xl">
+            SABER MÁS POR WHATSAPP
+        </a>
+        <div class="mt-20 text-[10px] tracking-[0.3em] text-gray-400 uppercase">
+            AERALIS.LAT | Guardianes de la Coherencia Estructural
         </div>
     </footer>
 
